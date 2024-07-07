@@ -37,15 +37,10 @@
 }
 #tabs-container {
     height: 25%;
-    padding-left: 900px;
+    padding-left: 825px;
     display: flex;
 }
-.tabsName {
-    font-weight: bold;
-    font-size: 24px;
-    padding-left: 10px;
-    cursor: pointer;
-}
+
 .nav-tab {
     margin-right: 20px;
     transition: transform 0.3s ease; /* Add transition for smoother animation */
@@ -66,6 +61,11 @@
     display: flex;
 }
 #locTab {
+    color: white;
+    padding-left: 60px;
+    display: flex;
+}
+#OLTab {
     color: white;
     padding-left: 60px;
     display: flex;
@@ -132,6 +132,9 @@
     position: relative; /* Ensure the underline is relative to the text */
     text-decoration: none; /* Remove default underline */
     transition: font-size 0.3s ease; /* Add transition for font size */
+    font-weight: bold;
+    font-size: large;
+    cursor: pointer;
 }
 
 
@@ -162,11 +165,6 @@
 }
 
 /* location page */
-#locTab {
-    color: white;
-    padding-left: 60px;
-    display: flex;
-}
 
 .loc-container{
     width: 100%;
@@ -229,9 +227,6 @@ iframe{
 
 .learn-button:hover {
     background-color: rgb(22, 72, 99); /* Example hover background color */
-}
-
-#home-intro-image {
 }
 
 #secondBox{

@@ -29,13 +29,8 @@
 }
 #tabs-container {
     height: 25%;
-    padding-left: 900px;
+    padding-left: 825px;
     display: flex;
-}
-.tabsName {
-    font-weight: bolder;
-    font-size: 24px;
-    padding-left: 10px;
 }
 #homeTab {
     color: white;
@@ -53,6 +48,11 @@
     display: flex;
 }
 #locTab {
+    color: white;
+    padding-left: 60px;
+    display: flex;
+}
+#OLTab {
     color: white;
     padding-left: 60px;
     display: flex;
@@ -164,6 +164,8 @@
     position: relative; /* Ensure the underline is relative to the text */
     text-decoration: none; /* Remove default underline */
     transition: font-size 0.3s ease; /* Add transition for font size */
+    font-weight: bolder;
+    font-size: large;
 }
 
 
