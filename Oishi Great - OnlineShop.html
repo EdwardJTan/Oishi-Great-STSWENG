@@ -3,7 +3,7 @@
 
 <head>
     <title> Oishi Great - Home </title>
-    <link rel="stylesheet" href="css\mainCss.css">
+    <link rel="stylesheet" href="css\shop.css">
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
     <script src="https://kit.fontawesome.com/e0c28b56a4.js" crossorigin="anonymous"></script>
 </head>
@@ -25,9 +25,6 @@
             <div id="aboutTab" class="nav-tab">
                 <p class="tabsName" onclick="window.location.href='Oishi Great - About.html';">ABOUT</p>
             </div>
-            <div id="prodTab" class="nav-tab">
-                <p class="tabsName" onclick="window.location.href='Oishi Great - Product.html';">PRODUCTS</p>
-            </div>
             <div id="locTab" class="nav-tab">
                 <p class="tabsName" onclick="window.location.href='Oishi Great - Location.html';">LOCATION</p>
             </div>
@@ -42,35 +39,45 @@
     <div>
         <div id="upperBox">   
             <div class="home-intro">
-                <h1> Shop Here </h1>    
-                <p> sample text for water image</p>
-                <button class="learn-button" onclick="window.location.href='Oishi Great - About.html';">LEARN MORE > </button>
+                <h1> Fresh Water Sales </h1>    
+                <p>Oishi Great's Best products!</p>
             </div>
-            <div class="home-intro" id="home-intro-image"><img src="./images/home-refill.png"></div>
+            <div class="home-intro" id="home-intro-image"><img src="./images/clearwater.png"></div>
         </div>
         
         <div id="secondBox">
             <div class="secondBoxText"> 
-                <h1 class="second-intro"> area for all main items</h1>
-                <p class="second-body"> this is where the items go</p>
+                <h1 class="second-intro">Main Products</h1>
             </div>
 
             <div class="secondBoxImages">
                 <div class="image-container">
-                    <img src="./images/image 7.png" class="party">
-                    <p class="image-text">Item 1</p>
+                    <div class="imageBox">
+                        <img src="./images/5gal.png">
+                        <p class="image-text">5 Gallons of Water</p>
+                        <button class="button-30" role="button">Add to Cart</button>
+                    </div>
                 </div>
                 <div class="image-container">
-                    <img src="./images/image 8.png" class="business">
-                    <p class="image-text">Item 2</p>
+                    <div class="imageBox">
+                        <img src="./images/1000ml.png">
+                        <p class="image-text">1000ml Water Bottle</p>
+                        <button class="button-30" role="button">Add to Cart</button>
+                    </div>
                 </div>
                 <div class="image-container">
-                    <img src="./images/icon_-individual.png" class="individual"> 
-                    <p class="image-text">Item 3</p>
+                    <div class="imageBox">
+                        <img src="./images/500ml.png">
+                        <p class="image-text">500ml Water Bottle</p>
+                        <button class="button-30" role="button">Add to Cart</button>
+                    </div>
                 </div>
                 <div class="image-container">
-                    <img src="./images/2316017-200.png" class="wholesale">
-                    <p class="image-text">Item 4</p>
+                    <div class="imageBox">
+                        <img src="./images/350ml.png">
+                        <p class="image-text">350ml Water Bottle</p>
+                        <button class="button-30" role="button">Add to Cart</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -79,7 +86,7 @@
     <div id="botNavBar-container">
         <div id="logo-bot">
             <img id="logo" src="images\Oishi Great.png">
-        </div>
+        </div> 
         <span></span>
         <div id="find">
             <h3> FIND US: </h3>
