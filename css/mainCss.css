@@ -26,49 +26,44 @@
     top: 0;
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
     align-items: center;
+    justify-content: space-between;
     z-index: 10;
+    padding: 20px 14%;
 }
-#logo-top{
-    padding: 20px;
-}
+
 #logo{
-    width: 100px;
-    height: 100px;
+    width: 75px;
+    height: 75px;
 }
 #tabs-container {
-    height: 25%;
-    padding-left: 825px;
     display: flex;
 }
 
-.nav-tab {
+#tabs-icon i{
+    font-size: 32px;
     margin-right: 20px;
+    transition: all .36s ease;
+    color: white;
+}
+
+.nav-tab {
+    padding: 10px 25px;
     transition: transform 0.3s ease; /* Add transition for smoother animation */
 }
 #homeTab {
     color: white;
-    padding-left: 60px;
-    display: flex;
 }
 #aboutTab {
     color: white;
-    padding-left: 60px;
-    display: flex;
 }
 #prodTab {
     color: white;
-    padding-left: 60px;
-    display: flex;
 }
 #locTab {
     color: white;
-    padding-left: 60px;
-    display: flex;
 }
 #OLTab {
     color: white;
-    padding-left: 60px;
-    display: flex;
 }
 #botNavBar-container {
     height: 110px;
@@ -128,11 +123,12 @@
 
 /* Add this CSS to your existing stylesheet */
 
+
 .tabsName {
     position: relative; /* Ensure the underline is relative to the text */
     text-decoration: none; /* Remove default underline */
     transition: font-size 0.3s ease; /* Add transition for font size */
-    font-weight: bold;
+    font-weight: 600;
     font-size: large;
     cursor: pointer;
 }
@@ -335,3 +331,4 @@ iframe{
 .fa-brands:hover {
     color:#1877F2 !important;
 }
+
