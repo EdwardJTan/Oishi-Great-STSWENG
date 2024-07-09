@@ -1,6 +1,6 @@
 /* include imports and @ stuff */
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -23,7 +23,7 @@
     padding: 20px 14%;
 }
 
-#logo{
+#logo {
     width: 75px;
     height: 75px;
 }
@@ -31,7 +31,7 @@
     display: flex;
 }
 
-#tabs-icon i{
+#tabs-icon i {
     font-size: 32px;
     margin-right: 20px;
     transition: all .36s ease;
@@ -46,7 +46,6 @@
     padding: 10px 25px;
     transition: transform 0.3s ease; /* Add transition for smoother animation */
 }
-
 
 #homeTab {
     color: white;
@@ -82,35 +81,34 @@
     width: 100%; /* Expand the width of the underline on hover */
 }
 
-#content-container{
+#content-container {
     background-color: white;    
     font-family: 'Krona One', sans-serif;
-    position: sticky;
-    top: 0;
+    padding-bottom: 120px; /* Add padding to the bottom to prevent content from being hidden behind the fixed navbar */
 }
-#history{
+#history {
     display: flex;
 }
-#history-content{
+#history-content {
     margin: auto;
     display: block;
     max-width: 700px;
     text-align: center;
 }
-#hsitoText{
+#hsitoText {
     padding-bottom: 2vh;
     font-family: "IBM Plex Mono", monospace;
     font-style: normal;
-    font-weight:700;
-    font-size:55px;
+    font-weight: 700;
+    font-size: 55px;
 }
-#history-content p{
+#history-content p {
     font-family: "IBM Plex Mono", monospace;
     font-style: normal;
-    font-size:20px;
-    max-width:900px;
+    font-size: 20px;
+    max-width: 900px;
 }
-.line{
+.line {
     border-bottom: 500px solid #888;
 }
 #services-container {
@@ -121,7 +119,7 @@
     align-items: center;
     background-color: rgb(221, 242, 253);
 }
-#services-content{
+#services-content {
     margin: auto;
     display: block;
     text-align: center; 
@@ -129,27 +127,27 @@
     padding-bottom: 5vh;
 }
 
-#services-content h1{
+#services-content h1 {
     font-family: "IBM Plex Mono", monospace;
     font-style: normal;
-    font-weight:700;
-    font-size:55px;
+    font-weight: 700;
+    font-size: 55px;
 }
 
-#services-content p{
+#services-content p {
     font-family: "IBM Plex Mono", monospace;
     font-style: normal;
     font-size: 20px;
 }
-#servText{
+#servText {
     padding-bottom: 2vh;
 }
-#p1{
+#p1 {
     height: 80vh;
     width: 50vh;
     padding-left: 15px;
 }
-#p2{
+#p2 {
     height: 80vh;
     width: 50vh;
     padding-left: 15px;
@@ -162,10 +160,11 @@
     font-family: 'Krona One', sans-serif;
     display: flex;
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
-    align-items: absolute;
+    align-items: center;
+    justify-content: space-around;
     z-index: 10;
+    margin-top: auto; /* Ensures it stays at the bottom of the page */
 }
-
 
 #botNavBar-container span {
     display: inline-block;
@@ -176,54 +175,49 @@
     border-radius: 50px;
 }
 
-
-#logo-bot{
+#logo-bot {
     padding-left: 600px;
 }
-#info{
+#info {
     display: flex;
     flex-grow: 1;  
     color: white;
 }
-#find{
+#find {
     color: white;
-    width:15em;
-    text-align:center;
+    width: 15em;
+    text-align: center;
     padding-top: 8px;
 }
-#addr{
+#addr {
     padding-top: 10px;
 }
-#contact{
+#contact {
     color: white;
-    width:10em;
-    text-align:center;
+    width: 10em;
+    text-align: center;
     padding-top: 8px;
 }
-#num{
+#num {
     padding-top: 10px;
 }
-#socials{
+#socials {
     color: white;
-    width:10em;
-    text-align:center;
+    width: 10em;
+    text-align: center;
     padding-top: 8px;
 }
-#soc{
+#soc {
     padding-top: 10px;
 }
-
-
-
 
 .fa-brands {
     transition: color 0.3s ease;
     padding-top: 20px;
-    padding-right:4px;
-    font-size:50px;
+    padding-right: 4px;
+    font-size: 50px;
 }
 
 .fa-brands:hover {
-    color:#1877F2 !important;
+    color: #1877F2 !important;
 }
-
