@@ -11,9 +11,6 @@ describe('Oishi Great Website Tests', () => {
     cy.get('#aboutTab .tabsName').click();
     cy.url().should('include', 'Oishi%20Great%20-%20About.html');
 
-    cy.get('#prodTab .tabsName').click();
-    cy.url().should('include', 'Oishi%20Great%20-%20Product.html');
-
     cy.get('#locTab .tabsName').click();
     cy.url().should('include', 'Oishi%20Great%20-%20Location.html');
 

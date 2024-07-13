@@ -1,4 +1,4 @@
-const { checkEmail, checkPass } = require('./validate');
+import { checkEmail, checkPass } from './validators.js';
 
 const form = document.querySelector("form");
 const eField = form.querySelector(".email"),
