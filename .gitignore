@@ -1,0 +1,38 @@
+# Node.js dependencies
+node_modules/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment variables
+.env
+
+# MacOS system files
+.DS_Store
+
+# IDE files
+.vscode/
+.idea/
+
+# Build output
+dist/
+build/
+
+# Coverage directory used by testing tools
+coverage/
+
+# Cypress specific files
+cypress/videos/
+cypress/screenshots/
+
+# Temporary files
+tmp/
+temp/
+
+# Ignore any other unimportant files or directories
+*.tmp
+*.swp
