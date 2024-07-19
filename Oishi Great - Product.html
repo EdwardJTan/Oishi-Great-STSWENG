@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Oishi Great - Product </title>
+    <link rel="stylesheet" href="css\product.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <script src="https://kit.fontawesome.com/e0c28b56a4.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="css\lightbox.min.css">
+    <script src="script\lightbox-plus-jquery.min.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <script type="text/javascript" src="script.js">  </script>
+    
+    <div id="topNavBar-container">
+        <div id="logo-top" onclick="window.location.href='Oishi Great - Home.html';">
+            <a href="#top">
+                <img id="logo" src="images\Oishi Great.png">
+            </a>
+        </div>
+        
+        <div id="tabs-container">
+            <div id="homeTab" class="nav-tab" onclick="window.location.href='Oishi Great - Home.html';">
+                <p class="tabsName">HOME</p>
+            </div>
+            <div id="aboutTab" class="nav-tab" onclick="window.location.href='Oishi Great - About.html';">
+                <p class="tabsName">ABOUT</p>
+            </div>
+            <div id="prodTab" class="nav-tab" onclick="window.location.href='Oishi Great - Product.html';">
+                <p class="tabsName">PRODUCTS</p>
+            </div>
+            <div id="locTab" class="nav-tab" onclick="window.location.href='Oishi Great - Location.html';">
+                <p class="tabsName">LOCATION</p>
+            </div>
+        </div>
+
+        <div id="tabs-icon">
+            <a onclick="window.location.href='Oishi Great - OnlineShop.html';" style="cursor: pointer;">
+                <i class='bx bx-store'></i>
+            </a>
+            <a onclick="window.location.href='Oishi Great - Login.html';" style="cursor: pointer;">
+                <i class='bx bxs-face'></i>
+            </a>
+        </div>
+        </div>
+    </div>
+
+    <div id="product-products">
+        <div id="products">
+            <div id="5gal" class="productclass" onmouseover="showPrice(this)" onmouseout="hidePrice(this)">
+                <a href="images\5gal price.png" data-lightbox="mygallery"><img class="product" id="5gal-img" src="images\5gal.png"></a>
+                <p>5 Gallons</p>
+            </div>
+            <div id="1000ml" class="productclass" onmouseover="showPrice(this)" onmouseout="hidePrice(this)">
+                <a href="images\1000ml price.png" data-lightbox="mygallery"><img class="product" id="1000ml-img" src="images\1000ml.png"></a>
+                <p>1000 ml</p>
+            </div>    
+            <div id="500ml" class="productclass" onmouseover="showPrice(this)" onmouseout="hidePrice(this)">
+                <a href="images\500ml price.png" data-lightbox="mygallery"><img class="product" id="500ml-img" src="images\500ml.png"></a>
+                <p>500 ml</p> 
+            </div> 
+            <div id="350ml" class="productclass" onmouseover="showPrice(this)" onmouseout="hidePrice(this)">
+                <a href="images\350ml price.png" data-lightbox="mygallery"><img class="product" id="350ml-img" src="images\350ml.png"></a>
+                <p>350 ml</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="botNavBar-container">
+        <div id="logo-bot">
+            <img id="logo" src="images\Oishi Great.png">
+        </div>
+        <span></span>
+        <div id="find">
+            <h3> FIND US: </h3>
+            <p id="addr"> 26-6TH CAMARILA ST. MURPHY. QUEZON CITY </p>
+        </div>
+        <span></span>
+        <div id="contact">
+            <h3> CONTACT: <br></h3>
+            <p id="num"> 921268 <br></p>
+            <a> 09291491052 <br></a>
+            <a> 09154418454 </a>
+        </div>
+        <span></span>
+        <div id="socials">
+            <h3> SOCIALS: </h3>
+            <p id="soc">  </p>
+            <a href="https://www.facebook.com/OshiGreat">
+                <i class="fa-brands fa-square-facebook fa-2xl" style="color: #000000;"></i>
+            </a>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
