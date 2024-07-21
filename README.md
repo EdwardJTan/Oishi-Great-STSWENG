@@ -1,2 +1,2 @@
 # Oishi-Great-STSWENG
-This is the updated website as a requirement for STSWENG
+This branch will contain the updated format of the website which will be comprised of handlebars
