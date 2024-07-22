@@ -19,6 +19,7 @@ npm install express-handlebars
 npm install express-session
 npm install hbs
 npm install i
+npm install moment
 npm install mongodb
 npm install mongoose
 npm install node-schedule
