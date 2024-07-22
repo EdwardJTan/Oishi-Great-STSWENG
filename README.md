@@ -9,22 +9,68 @@ This project uses several dependencies to function properly. The following secti
 
 ```bash
 npm install axios
+```
+```bash
 npm install bcrypt
+```
+```bash
 npm install body-parser
+```
+
+```bash
 npm install connect-mongo
+```
+
+```bash
 npm install dot-env
+```
+
+```bash
 npm install dotenv
+```
+
+
+```bash
 npm install express
+```
+
+```bash
 npm install express-handlebars
+```
+
+```bash
 npm install express-session
+```
+
+```bash
 npm install hbs
+```
+
+```bash
 npm install i
+```
+
+```bash
 npm install moment
+```
+
+```bash
 npm install mongodb
+```
+
+```bash
 npm install mongoose
+```
+
+```bash
 npm install node-schedule
+```
+
+```bash
 npm install nodemon
 ```
+
+
 
 ## Installation
 
