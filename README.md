@@ -71,6 +71,11 @@ npm install nodemon
 ```
 
 
+```bash
+npm install express-session connect-mongo bcrypt
+```
+
+
 
 ## Installation
 
