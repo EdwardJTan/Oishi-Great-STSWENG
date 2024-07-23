@@ -10,3 +10,14 @@ document.addEventListener('DOMContentLoaded', (event) => {
         dropdownContent.style.display = 'none';
     });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    var currentUrl = window.location.href;
+    var links = document.querySelectorAll('.sidebar ul li a');
+    
+    links.forEach(function(link) {
+        if (link.href === currentUrl) {
+            link.classList.add('active');
+        }
+    });
+});
