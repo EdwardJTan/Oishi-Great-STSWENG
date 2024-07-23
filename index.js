@@ -2,7 +2,8 @@ const express = require('express');
 const { engine } = require('express-handlebars');
 const path = require('path');
 const mongoose = require('mongoose');
-require('dotenv').config(); // Load environment variables
+const session = require('express-session');
+require('dotenv').config();
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -27,11 +28,25 @@ app.use(express.static(path.join(__dirname, 'public')));
 // Middleware to parse form data
 app.use(express.urlencoded({ extended: true }));
 
+// Set up session management with in-memory store
+app.use(session({
+  secret: 'your-secret-key', // Hardcoded secret for session
+  resave: false,
+  saveUninitialized: false,
+  cookie: { maxAge: 1000 * 60 * 60 * 24 } // 1 day
+}));
+
 const hbs = require('hbs');
 hbs.registerPartials(__dirname + '/views/partials');
 
+// Ensure user session is passed to views
+app.use((req, res, next) => {
+  res.locals.loggedIn = req.session.userId;
+  next();
+});
+
 // Load routes
-const routes = require('./routes/routes');  // Updated path to routes.js
+const routes = require('./routes/routes');
 app.use('/', routes);
 
 // Start the server
