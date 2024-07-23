@@ -1,10 +1,10 @@
 const express = require('express');
 const router = express.Router();
-const userController = require('../controllers/User'); // Adjusted path to User controller
+const userController = require('../controllers/User');
+const loginController = require('../controllers/Login'); // New controller for login
 
-// Define routes
 router.get('/', (req, res) => {
-  res.render('Oishi Great - Home');
+  res.render('Oishi Great - Home', { loggedIn: req.session.userId });
 });
 
 router.get('/about', (req, res) => {
@@ -28,6 +28,7 @@ router.get('/signup', (req, res) => {
 });
 
 router.post('/signup', userController.signup);
-
+router.post('/login', loginController.login);
+router.post('/logout', loginController.logout); // Optional, if you want logout functionality
 
 module.exports = router;
