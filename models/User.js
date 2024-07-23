@@ -20,7 +20,7 @@ const userSchema = new mongoose.Schema({
   gender: String,
   username: String,
   password: String
-});
+}, { versionKey: false });
 
 // Pre-save hook to hash the password
 userSchema.pre('save', async function (next) {
