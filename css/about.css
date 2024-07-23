@@ -18,25 +18,24 @@
     top: 0;
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
     align-items: center;
+    justify-content: space-between;
     z-index: 10;
+    padding: 20px 14%;
 }
-#logo-top{
-    padding: 20px;
-}
+
 #logo{
-    width: 100px;
-    height: 100px;
+    width: 75px;
+    height: 75px;
 }
 #tabs-container {
-    height: 25%;
-    padding-left: 900px;
     display: flex;
 }
-.tabsName {
-    font-weight: bolder;
-    font-size: 24px;
-    padding-left: 10px;
-    cursor: pointer;
+
+#tabs-icon i{
+    font-size: 32px;
+    margin-right: 20px;
+    transition: all .36s ease;
+    color: white;
 }
 
 .nav-tab:hover {
@@ -44,35 +43,30 @@
     transform: scale(1.05); /* Scale up the tab on hover */
 }
 .nav-tab {
-    margin-right: 20px;
+    padding: 10px 25px;
     transition: transform 0.3s ease; /* Add transition for smoother animation */
 }
 
 
 #homeTab {
     color: white;
-    padding-left: 60px;
-    display: flex;
 }
 #aboutTab {
     color: white;
-    padding-left: 60px;
-    display: flex;
-}
-#prodTab {
-    color: white;
-    padding-left: 60px;
-    display: flex;
 }
 #locTab {
     color: white;
-    padding-left: 60px;
-    display: flex;
+}
+#OLTab {
+    color: white;
 }
 .tabsName {
     position: relative; /* Ensure the underline is relative to the text */
     text-decoration: none; /* Remove default underline */
     transition: font-size 0.3s ease; /* Add transition for font size */
+    font-weight: 600;
+    font-size: large;
+    cursor: pointer;
 }
 .tabsName::after {
     content: ''; /* Add a pseudo-element for the underline */
