@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang = "en">
+
+<head>
+    <title> Oishi Great - Home </title>
+    <link rel="stylesheet" href="css\user-address.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <script src="https://kit.fontawesome.com/e0c28b56a4.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <script type="text/javascript" src="script\my-account.js">  </script>
+  
+    <div id="topNavBar-container">
+        <div id="logo-top" onclick="window.location.href='Oishi Great - Home.html';">
+            <a href="#top">
+                <img id="logo" src="images\Oishi Great.png">
+            </a>
+        </div>
+        
+        <div id="tabs-container">
+            <div id="homeTab" class="nav-tab">
+                <p class="tabsName" onclick="window.location.href='Oishi Great - Home.html';">HOME</p>
+            </div>
+            <div id="aboutTab" class="nav-tab">
+                <p class="tabsName" onclick="window.location.href='Oishi Great - About.html';">ABOUT</p>
+            </div>
+            <div id="locTab" class="nav-tab">
+                <p class="tabsName" onclick="window.location.href='Oishi Great - Location.html';">LOCATION</p>
+            </div>
+        </div>
+
+        <div id="tabs-icon">
+            <a onclick="window.location.href='Oishi Great - OnlineShop.html';" style="cursor: pointer;"><i class='bx bx-store'></i></a>
+            <div class="user-icon" id="userIcon">
+                <a onclick="window.location.href='Oishi Great - Login.html';" style="cursor: pointer;">
+                    <i class='bx bxs-face'></i>
+                </a>
+                <div class="dropdown-content" id="dropdownContent">
+                    <a href="Oishi Great - MyAccount.html">My Account</a>
+                    <a href="Oishi Great - Login.html">Log Out</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- My Account Section -->
+    <div class="account-container">
+        <div class="account-header">
+            <h1>My Account</h1>
+        </div>
+        <div class="account-content">
+            <div class="sidebar">
+                <h2>MY ACCOUNT</h2>
+                <ul>
+                    <li><a href="Oishi Great - MyAccount.html" class="active">Dashboard</a></li>
+                    <li><a href="#">Orders</a></li>
+                    <li><a href="Oishi Great - UserAddress.html">Addresses</a></li>
+                    <li><a href="#">Payment Methods</a></li>
+                    <li><a href="#">Account Details</a></li>
+                    <!-- <li><a href="#">Wishlist</a></li> -->
+                    <li><a href="#">Logout</a></li>
+                </ul>
+            </div>
+            <div class="main-content">
+                <h2 id="shipping-address">Shipping Address</h2>
+                <form action="#" method="post" class="address-form">
+                    <label for="first-name">First name *</label>
+                    <input type="text" id="first-name" name="first-name" value="" required>
+                    
+                    <label for="last-name">Last name *</label>
+                    <input type="text" id="last-name" name="last-name" value="" required>
+                    
+                    <label for="company-name">Company name (optional)</label>
+                    <input type="text" id="company-name" name="company-name">
+                    
+                    <label for="country-region">Country / Region *</label>
+                    <input type="text" id="country-region" name="country-region" value="" required>
+                    
+                    <label for="street-address">Street address *</label>
+                    <input type="text" id="street-address" name="street-address" value="" required>
+                    
+                    <label for="city">City *</label>
+                    <input type="text" id="city" name="city" value="" required>
+                    
+                    <label for="province">Province *</label>
+                    <input type="text" id="province" name="province" value="" required>
+                    
+                    <label for="postal-code">Postal code *</label>
+                    <input type="text" id="postal-code" name="postal-code" value="" required>
+                    
+                    <button type="submit">SAVE ADDRESS</button>
+                </form>
+            </div>
+        </div>
+    </div>    
+
+
+    <div id="botNavBar-container">
+        <div id="logo-bot">
+            <img id="logo" src="images\Oishi Great.png">
+        </div>
+        <span></span>
+        <div id="find">
+            <h3> FIND US: </h3>
+            <p id="addr"> 26-6TH CAMARILA ST. MURPHY. QUEZON CITY </p>
+        </div>
+        <span></span>
+        <div id="contact">
+            <h3> CONTACT: <br></h3>
+            <p id="num"> 921268 <br></p>
+            <a> 09291491052 <br></a>
+            <a> 09154418454 </a>
+        </div>
+        <span></span>
+        <div id="socials">
+            <h3> SOCIALS: </h3>
+            <p id="soc">  </p>
+            <a href="https://www.facebook.com/OshiGreat">
+                <i class="fa-brands fa-square-facebook fa-2xl" style="color: white;"></i>
+            </a>
+        </div>
+    </div>
+
+
+</body>
+</html>
