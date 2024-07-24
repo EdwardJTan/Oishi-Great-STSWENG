@@ -351,6 +351,11 @@ iframe{
     font-size: 18px;
 }
 
+.address-block p {
+    font-style: italic;
+    font-size: small;
+}
+
 .edit-button {
     text-decoration: none;
     color: #8c8c8c;
@@ -361,6 +366,28 @@ iframe{
     text-decoration: none;
     color: #007bff;
     font-size: small;
+}
+
+/* Container for first and last name fields */
+.name-fields {
+    display: flex;
+    margin-right: 150px;
+    gap: 20px;
+}
+
+/* Individual field styling */
+.name-field {
+    flex: 1; /* Makes each field take equal width */
+}
+
+/* Ensuring labels and inputs are aligned */
+.name-field label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.name-field input {
+    width: 100%;
 }
 
 .address-form {
@@ -374,21 +401,33 @@ iframe{
 }
 
 .address-form input {
-    padding: 10px;
+    padding: 12px;
     font-size: 14px;
-    border: 1px solid #ccc;
+    border: 2px solid #e9e7e7;
     border-radius: 5px;
+    margin-right: 150px;
+    margin-bottom: 15px;
 }
 
 .address-form button {
-    padding: 10px 24px;
+    padding: 12px 24px;
     font-size: 16px;
     background-color: #007bff;
     color: white;
     border: none;
     cursor: pointer;
     border-radius: 5px;
-    margin-top: 20px;
     margin-bottom: 50px;
     font-weight: bold;
+    margin-right: auto;
+}
+
+.address-form button:hover {
+    background-color: #0166d2;
+}
+
+.required {
+    color: red;
+    position: relative;
+    cursor: pointer;
 }

@@ -59,39 +59,46 @@
                     <li><a href="#" class="payment-methods">Payment Methods</a></li>
                     <li><a href="#" class="account-details">Account Details</a></li>
                     <!-- <li><a href="#">Wishlist</a></li> -->
-                    <li><a href="#" class="logout">Logout</a></li>
+                    <li><a href="Oishi Great - Home.html" class="logout">Logout</a></li>
                 </ul>
             </div>
             <div class="main-content">
                 <h2 id="shipping-address">Shipping Address</h2>
                 <form action="#" method="post" class="address-form">
-                    <label for="first-name">First name *</label>
-                    <input type="text" id="first-name" name="first-name" value="" required>
-                    
-                    <label for="last-name">Last name *</label>
-                    <input type="text" id="last-name" name="last-name" value="" required>
+                    <div class="name-fields">
+                        <div class="name-field">
+                            <label for="first-name">First name <span class="required" title="Required">*</span></label>
+                            <input type="text" id="first-name" name="first-name" value="" placeholder="Enter your first name" required>
+                        </div>
+                        <div class="name-field">
+                            <label for="last-name">Last name <span class="required" title="Required">*</span></label>
+                            <input type="text" id="last-name" name="last-name" value="" placeholder="Enter your last name" required>
+                        </div>
+                    </div>
                     
                     <label for="company-name">Company name (optional)</label>
                     <input type="text" id="company-name" name="company-name">
                     
-                    <label for="country-region">Country / Region *</label>
+                    <label for="country-region">Country / Region <span class="required" title="Required">*</span></label>
                     <input type="text" id="country-region" name="country-region" value="" required>
+
+                    <input type="text" id="apartment-suite" name="apartment-suite" value="" placeholder="Apartment, suite, unit, etc. (optional)">
                     
-                    <label for="street-address">Street address *</label>
+                    <label for="street-address">Street address <span class="required" title="Required">*</span></label>
                     <input type="text" id="street-address" name="street-address" value="" required>
                     
-                    <label for="city">City *</label>
+                    <label for="city">City <span class="required" title="Required">*</span></label>
                     <input type="text" id="city" name="city" value="" required>
                     
-                    <label for="province">Province *</label>
-                    <input type="text" id="province" name="province" value="" required>
+                    <label for="province">State / County <span class="required" title="Required">*</span></label>
+                    <input type="text" id="state" name="province" value="" required>
                     
-                    <label for="postal-code">Postal code *</label>
-                    <input type="text" id="postal-code" name="postal-code" value="" required>
+                    <label for="postal-code">Postal code <span class="required" title="Required">*</span></label>
+                    <input type="number" id="postal-code" name="postal-code" value="" required>
                     
                     <button type="submit">SAVE ADDRESS</button>
                 </form>
-            </div>
+            </div>            
         </div>
     </div>    
 
