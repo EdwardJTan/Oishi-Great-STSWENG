@@ -357,6 +357,12 @@ iframe{
     font-size: small;
 }
 
+.edit-button:hover {
+    text-decoration: none;
+    color: #007bff;
+    font-size: small;
+}
+
 .address-form {
     display: flex;
     flex-direction: column;
