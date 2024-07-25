@@ -40,6 +40,7 @@ body {
 }
 #tabs-container {
     display: flex;
+    padding-left: 85px;
 }
 
 #tabs-icon i{
