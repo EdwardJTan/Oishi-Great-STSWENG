@@ -36,6 +36,7 @@
 }
 #tabs-container {
     display: flex;
+    padding-left: 85px;
 }
 
 #tabs-icon i{
@@ -391,4 +392,20 @@ svg {
     height: 70px; /* or any desired height */
     fill: #7a7676;
     margin-bottom: 10px;
+}
+
+.numItems {
+    font-size: medium;
+    font-weight: bold;
+    display: flex;
+    width: 25px;
+    height: 25px;
+    background-color: red;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 47%;
+    right: 313px;
 }

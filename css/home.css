@@ -36,6 +36,7 @@
 }
 #tabs-container {
     display: flex;
+    padding-left: 85px;
 }
 
 #tabs-icon i{
@@ -182,7 +183,7 @@ iframe{
 
 .home-intro{
     padding-top: 90px;
-    padding-left:50px;
+    padding-left:68px;
     max-width: 950px;
 }
 
@@ -378,3 +379,18 @@ iframe{
     color: #007bff !important; /* Accent color for user icon on hover */
 }
 
+.numItems {
+    font-size: medium;
+    font-weight: bold;
+    display: flex;
+    width: 25px;
+    height: 25px;
+    background-color: red;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 47%;
+    right: 313px;
+}

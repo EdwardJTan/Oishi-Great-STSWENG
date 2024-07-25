@@ -8,9 +8,7 @@
     <script src="https://kit.fontawesome.com/e0c28b56a4.js" crossorigin="anonymous"></script>
 </head>
 
-<body>
-    <script type="text/javascript" src="home.js">  </script>
-  
+<body class="">
     <div id="topNavBar-container">
         <div id="logo-top" onclick="window.location.href='Oishi Great - Home.html';">
             <a href="#top">
@@ -32,6 +30,7 @@
 
         <div id="tabs-icon">
             <a onclick="window.location.href='Oishi Great - OnlineShop.html';" style="cursor: pointer;"><i class='bx bx-store'></i></a>
+            <a style="cursor: pointer;"><i class='bx bx-cart'><span class="numItems">0</span></i></a>
             <div class="user-icon" id="userIcon">
                 <a onclick="window.location.href='Oishi Great - Login.html';" style="cursor: pointer;">
                     <i class='bx bxs-face'></i>
@@ -43,53 +42,74 @@
             </div>
         </div>
     </div>
-    
-    <div>
-        <div id="upperBox">   
-            <div class="home-intro">
-                <h1> Fresh Water Sales </h1>    
-                <p>Oishi Great's Best products!</p>
-            </div>
-            <div class="home-intro" id="home-intro-image"><img src="./images/clearwater.png"></div>
-        </div>
-        
-        <div id="secondBox">
-            <div class="secondBoxText"> 
-                <h1 class="second-intro">Main Products</h1>
-            </div>
 
-            <div class="secondBoxImages">
-                <div class="image-container">
-                    <div class="imageBox">
-                        <img src="./images/5gal.png">
-                        <p class="image-text">5 Gallons of Water</p>
-                        <button class="button-30" role="button">Add to Cart</button>
+    <div class="allBoxes">
+        <div class="cartArea">
+            <h1>Shopping Cart</h1>
+            <div class="cartList">
+                <!-- <div class="itemBox">
+                    <img src="./images/1000ml.png">
+                    <p class="image-text">1000ml Water Bottle</p>
+                    <p class="image-text">100 Php</p>
+                    <div class="quantity">
+                        <span class="minus">-</span>
+                        <span>1</span>
+                        <span class="plus">+</span>
                     </div>
+                </div> -->
+            </div>
+            <div class="totalCost">Total Cost: ₱ 0</div>
+            <div class="btn">
+                <button class="close">CLOSE</button>
+                <button class="checkOut">CHECK OUT</button>
+            </div>
+        </div>
+    
+        <div class="shoppingBox">
+            
+            <div id="secondBox">
+                <div class="secondBoxText"> 
+                    <h1 class="second-intro">MAIN PRODUCTS</h1>
                 </div>
-                <div class="image-container">
-                    <div class="imageBox">
-                        <img src="./images/1000ml.png">
-                        <p class="image-text">1000ml Water Bottle</p>
-                        <button class="button-30" role="button">Add to Cart</button>
+    
+                <div class="secondBoxImages">
+                    <!-- <div class="image-container">
+                        <div class="imageBox">
+                            <img src="./images/5gal.png">
+                            <p class="image-text">5 Gallons of Water</p>
+                            <p class="image-text">200 Php</p>
+                            <button class="button-30" role="button">Add to Cart</button>
+                        </div>
                     </div>
-                </div>
-                <div class="image-container">
-                    <div class="imageBox">
-                        <img src="./images/500ml.png">
-                        <p class="image-text">500ml Water Bottle</p>
-                        <button class="button-30" role="button">Add to Cart</button>
+                    <div class="image-container">
+                        <div class="imageBox">
+                            <img src="./images/1000ml.png">
+                            <p class="image-text">1000ml Water Bottle</p>
+                            <p class="image-text">100 Php</p>
+                            <button class="button-30" role="button">Add to Cart</button>
+                        </div>
                     </div>
-                </div>
-                <div class="image-container">
-                    <div class="imageBox">
-                        <img src="./images/350ml.png">
-                        <p class="image-text">350ml Water Bottle</p>
-                        <button class="button-30" role="button">Add to Cart</button>
+                    <div class="image-container">
+                        <div class="imageBox">
+                            <img src="./images/500ml.png">
+                            <p class="image-text">500ml Water Bottle</p>
+                            <p class="image-text">40 Php</p>
+                            <button class="button-30" role="button">Add to Cart</button>
+                        </div>
                     </div>
+                    <div class="image-container">
+                        <div class="imageBox">
+                            <img src="./images/350ml.png">
+                            <p class="image-text">350ml Water Bottle</p>
+                            <p class="image-text">20 Php</p>
+                            <button class="button-30" role="button">Add to Cart</button>
+                        </div>
+                    </div> -->
                 </div>
             </div>
         </div>
     </div>
+    
 
     <div id="botNavBar-container">
         <div id="logo-bot">
@@ -117,7 +137,7 @@
         </div>
     </div>
 
-
+    <script type="text/javascript" src="script/home.js"></script>
 </body>
 
 </html>
