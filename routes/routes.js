@@ -27,22 +27,16 @@ router.get('/signup', (req, res) => {
   res.render('Oishi Great - Signup');
 });
 
-router.get('/edituseraddress', (req, res) => {
-  res.render('Oishi Great - EditUserAddress');
-});
-
-router.get('/myaccount', (req, res) => {
-  const username = req.session.username;
-  const loggedIn = !!username; // Check if username exists to determine if logged in
-  res.render('Oishi Great - MyAccount', { username , loggedIn });
-});
-
 router.get('/useraddress', (req, res) => {
   res.render('Oishi Great - UserAddress');
 });
 
-router.post('/signup', userController.signup);
+router.get('/myaccount', userController.getMyAccount); // fetch user data from the database to reflect changes immediately
+router.get('/editaccountdetails', userController.getEditAccountDetails); // fetch the user data from the database to reflect changes immediately
+
+router.post('/signup', userController.signup); 
 router.post('/login', loginController.login);
 router.post('/logout', loginController.logout); // Optional, if you want logout functionality
+router.post('/editaccountdetails', userController.updateAccountDetails);
 
 module.exports = router;
