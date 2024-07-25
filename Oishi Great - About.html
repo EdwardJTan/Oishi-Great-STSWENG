@@ -4,13 +4,12 @@
 <head>
     <title> Oishi Great - About </title>
     <link rel="stylesheet" href="css\about.css">
-    
-  <script src="https://kit.fontawesome.com/e0c28b56a4.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <script src="https://kit.fontawesome.com/e0c28b56a4.js" crossorigin="anonymous"></script>
 
 </head>
 
-<body>
-    <script type="text/javascript" src="script.js">  </script>
+<body class="">
     <div id="topNavBar-container">
         <div id="logo-top" onclick="window.location.href='Oishi Great - Home.html';">
             <a href="#top">
@@ -25,11 +24,22 @@
             <div id="aboutTab" class="nav-tab">
                 <p class="tabsName" onclick="window.location.href='Oishi Great - About.html';">ABOUT</p>
             </div>
-            <div id="prodTab" class="nav-tab">
-                <p class="tabsName" onclick="window.location.href='Oishi Great - Product.html';">PRODUCTS</p>
-            </div>
             <div id="locTab" class="nav-tab">
                 <p class="tabsName" onclick="window.location.href='Oishi Great - Location.html';">LOCATION</p>
+            </div>
+        </div>
+
+        <div id="tabs-icon">
+            <a onclick="window.location.href='Oishi Great - OnlineShop.html';" style="cursor: pointer;"><i class='bx bx-store'></i></a>
+            <a onclick="window.location.href='Oishi Great - OnlineShop.html';" style="cursor: pointer;"><i class='bx bx-cart'><span class="numItems">0</span></i></a>
+            <div class="user-icon" id="userIcon">
+                <a onclick="window.location.href='Oishi Great - Login.html';" style="cursor: pointer;">
+                    <i class='bx bxs-face'></i>
+                </a>
+                <div class="dropdown-content" id="dropdownContent">
+                    <a href="Oishi Great - MyAccount.html">My Account</a>
+                    <a href="Oishi Great - Login.html">Log Out</a>
+                </div>
             </div>
         </div>
     </div>
@@ -86,7 +96,7 @@
         </div>
     </div>
 
-
+    <script type="text/javascript" src="/script/about.js">  </script>
 </body>
 
 </html>
