@@ -1,5 +1,5 @@
 # Oishi-Great-STSWENG
-This branch will contain the updated format of the website which will be comprised of handlebars. It is also primarily based on sprint 2
+This branch will contain the updated format of the website which will be comprised of handlebars. It is also primarily based on sprint 2. No Logouts yet
 
 ## Description
 
