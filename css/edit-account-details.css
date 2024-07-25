@@ -408,6 +408,6 @@ button:hover {
     color: #fff;
     border-radius: 50%;
     position: absolute;
-    top: 47%;
-    right: 313px;
+    top: 50%;
+    right: 300px;
 }
