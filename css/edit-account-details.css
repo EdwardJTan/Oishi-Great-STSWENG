@@ -372,6 +372,11 @@ button {
     border-radius: 5px;
     margin-top: 20px;
     margin-bottom: 40px;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #0166d2;
 }
 
 .main-content h2 {
