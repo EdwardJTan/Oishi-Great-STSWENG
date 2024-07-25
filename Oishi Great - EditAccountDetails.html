@@ -3,7 +3,7 @@
 
 <head>
     <title> Oishi Great - Home </title>
-    <link rel="stylesheet" href="css\user-address.css">
+    <link rel="stylesheet" href="css\edit-account-details.css">
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
     <script src="https://kit.fontawesome.com/e0c28b56a4.js" crossorigin="anonymous"></script>
 </head>
@@ -63,26 +63,44 @@
                 </ul>
             </div>
             <div class="main-content">
-                <p>The following addresses will be used on the checkout page by default.</p>
-                <div class="address-section">
-                    <div class="address-block">
-                        <h3>BILLING ADDRESS <a class="edit-button" href="Oishi Great - EditUserAddress.html">Edit</a></h3>
-                        <p>First name Last name</p>
-                        <p>Street Address</p>
-                        <p>City</p>
-                        <p>Region</p>
-                        <p>Postal code</p>
+                <form class="account-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="first-name">First name <span class="required" title="required">*</span></label>
+                            <input type="text" id="first-name" name="first-name" value="">
+                        </div>
+                        <div class="form-group">
+                            <label for="last-name">Last name <span class="required" title="required">*</span></label>
+                            <input type="text" id="last-name" name="last-name" value="">
+                        </div>
                     </div>
-                    <div class="address-block">
-                        <h3>SHIPPING ADDRESS <a class="edit-button" href="Oishi Great - EditUserAddress.html">Edit</a></h3>
-                        <p>First name Last name</p>
-                        <p>Street Address</p>
-                        <p>City</p>
-                        <p>Region</p>
-                        <p>Postal code</p>
+                    <div class="form-group">
+                        <label for="display-name">Display name <span class="required" title="required">*</span></label>
+                        <input type="text" id="display-name" name="display-name" value="">
+                        <p class="description">This will be how your name will be displayed in the account section</p>
                     </div>
-                </div>
-            </div>
+                    <div class="form-group">
+                        <label for="email-address">Email address <span class="required" title="required">*</span></label>
+                        <input type="email" id="email-address" name="email-address" value="">
+                    </div>
+                    
+                    <h2>Password change</h2>
+                    <div class="form-group">
+                        <label for="current-password">Current password (leave blank to leave unchanged)</label>
+                        <input type="password" id="current-password" name="current-password">
+                    </div>
+                    <div class="form-group">
+                        <label for="new-password">New password (leave blank to leave unchanged)</label>
+                        <input type="password" id="new-password" name="new-password">
+                    </div>
+                    <div class="form-group">
+                        <label for="confirm-password">Confirm new password</label>
+                        <input type="password" id="confirm-password" name="confirm-password">
+                    </div>
+                    
+                    <button type="submit">Save Changes</button>
+                </form>
+            </div>                    
         </div>
     </div>    
 
