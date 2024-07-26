@@ -1,6 +1,13 @@
 # Oishi-Great-STSWENG
 This branch will contain the updated format of the website which will be comprised of handlebars. It is also primarily based on sprint 2. Can logout now
 
+.env
+
+PORT=3000
+HOSTNAME=localhost
+MONGODB_URI=mongodb+srv://christian117:dbz1986@cluster0.bvjyexi.mongodb.net/OishiGreatDB?retryWrites=true&w=majority&appName=Cluster0
+
+
 ## Description
 
 This project uses several dependencies to function properly. The following sections will guide you on how to install these dependencies.
