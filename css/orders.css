@@ -481,7 +481,7 @@ Returned - The order was returned by the customer.
 
 .processing {
     color: #fff;
-    background-color: #9BB3D8; /* Darker Pastel Blue */
+    background-color: #8EB1D6; /* Darker Pastel Blue */
 }
 
 .on-hold {
@@ -516,7 +516,7 @@ Returned - The order was returned by the customer.
 
 .refunded {
     color: #fff;
-    background-color: #D8A2F0; /* Darker Pastel Purple */
+    background-color: #D0A6C0; /* Darker Pastel Purple */
 }
 
 .pagination {
