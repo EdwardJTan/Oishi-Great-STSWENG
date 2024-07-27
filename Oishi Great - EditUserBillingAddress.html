@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <script type="text/javascript" src="script\my-account.js">  </script>
+    <script type="text/javascript" src="script\edit-user-billing-address.js">  </script>
   
     <div id="topNavBar-container">
         <div id="logo-top" onclick="window.location.href='Oishi Great - Home.html';">
@@ -64,8 +64,8 @@
                 </ul>
             </div>
             <div class="main-content">
-                <h2 id="shipping-address">Shipping Address</h2>
-                <form action="#" method="post" class="address-form">
+                <h2 id="shipping-address">Billing Address</h2>
+                <form onsubmit="event.preventDefault(); saveBillingAddress();" action="#" method="post" class="address-form">
                     <div class="name-fields">
                         <div class="name-field">
                             <label for="first-name">First name <span class="required" title="Required">*</span></label>

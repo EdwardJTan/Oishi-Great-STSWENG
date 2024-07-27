@@ -3,13 +3,13 @@
 
 <head>
     <title> Oishi Great - Home </title>
-    <link rel="stylesheet" href="css\edit-account-details.css">
+    <link rel="stylesheet" href="css\user-address.css">
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
     <script src="https://kit.fontawesome.com/e0c28b56a4.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <script type="text/javascript" src="script\edit-account-details.js">  </script>
+    <script type="text/javascript" src="script\edit-user-shipping-address.js">  </script>
   
     <div id="topNavBar-container">
         <div id="logo-top" onclick="window.location.href='Oishi Great - Home.html';">
@@ -64,49 +64,42 @@
                 </ul>
             </div>
             <div class="main-content">
-                <form class="account-form">
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="first-name">First name <span class="required" title="required">*</span></label>
-                            <input type="text" id="first-name" name="first-name" value="" required>
+                <h2 id="shipping-address">Shipping Address</h2>
+                <form onsubmit="event.preventDefault(); saveShippingAddress();" action="#" method="post" class="address-form">
+                    <div class="name-fields">
+                        <div class="name-field">
+                            <label for="first-name">First name <span class="required" title="Required">*</span></label>
+                            <input type="text" id="first-name" name="first-name" value="" placeholder="Enter your first name" required>
                         </div>
-                        <div class="form-group">
-                            <label for="last-name">Last name <span class="required" title="required">*</span></label>
-                            <input type="text" id="last-name" name="last-name" value="" required>
+                        <div class="name-field">
+                            <label for="last-name">Last name <span class="required" title="Required">*</span></label>
+                            <input type="text" id="last-name" name="last-name" value="" placeholder="Enter your last name" required>
                         </div>
                     </div>
-                    <div class="form-group">
-                        <label for="display-name">Display name <span class="required" title="required">*</span></label>
-                        <input type="text" id="display-name" name="display-name" value="" required>
-                        <p class="description">This will be how your name will be displayed in the account section</p>
-                    </div>
-                    <div class="form-group">
-                        <label for="email-address">Email address <span class="required" title="required">*</span></label>
-                        <input type="email" id="email-address" name="email-address" value="" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="phone-no">Phone number <span class="required" title="required">*</span></label>
-                        <input type="number" id="phone-no" name="phone-no" value="" required>
-                    </div>
+                    
+                    <label for="company-name">Company name (optional)</label>
+                    <input type="text" id="company-name" name="company-name">
+                    
+                    <label for="country-region">Country / Region <span class="required" title="Required">*</span></label>
+                    <input type="text" id="country-region" name="country-region" value="" required>
+                    
+                    <label for="street-address">Street address <span class="required" title="Required">*</span></label>
+                    <input type="text" id="street-address" name="street-address" value="" required>
 
+                    <input type="text" id="apartment-suite" name="apartment-suite" value="" placeholder="Apartment, suite, unit, etc. (optional)">
                     
-                    <h2>Password change</h2>
-                    <div class="form-group">
-                        <label for="current-password">Current password (leave blank to leave unchanged)</label>
-                        <input type="password" id="current-password" name="current-password">
-                    </div>
-                    <div class="form-group">
-                        <label for="new-password">New password (leave blank to leave unchanged)</label>
-                        <input type="password" id="new-password" name="new-password">
-                    </div>
-                    <div class="form-group">
-                        <label for="confirm-password">Confirm new password</label>
-                        <input type="password" id="confirm-password" name="confirm-password">
-                    </div>
+                    <label for="city">City <span class="required" title="Required">*</span></label>
+                    <input type="text" id="city" name="city" value="" required>
                     
-                    <button type="submit">SAVE CHANGES</button>
+                    <label for="province">State / County <span class="required" title="Required">*</span></label>
+                    <input type="text" id="state" name="province" value="" required>
+                    
+                    <label for="postal-code">Postal code <span class="required" title="Required">*</span></label>
+                    <input type="number" id="postal-code" name="postal-code" value="" required>
+                    
+                    <button type="submit">SAVE ADDRESS</button>
                 </form>
-            </div>                    
+            </div>            
         </div>
     </div>    
 
