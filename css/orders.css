@@ -476,47 +476,47 @@ Returned - The order was returned by the customer.
 
 .pending {
     color: #fff;
-    background-color: #F57C00; /* Stronger Orange for high contrast */
+    background-color: #F4A261; /* Darker Pastel Orange */
 }
 
 .processing {
     color: #fff;
-    background-color: #003B5C; /* Very Dark Blue for high contrast */
+    background-color: #9BB3D8; /* Darker Pastel Blue */
 }
 
 .on-hold {
     color: #fff;
-    background-color: #F9A825; /* Darker Amber for high contrast */
+    background-color: #F4B730; /* Darker Pastel Amber */
 }
 
 .cancelled {
     color: #fff;
-    background-color: #D32F2F; /* Strong Red for high contrast */
+    background-color: #F5A5A5; /* Darker Pastel Red */
 }
 
 .shipped {
     color: #fff;
-    background-color: #009688; /* Very Dark Teal for high contrast */
+    background-color: #8FD4D2; /* Darker Pastel Teal */
 }
 
 .delivered {
     color: #fff;
-    background-color: #388E3C; /* Darker Green for high contrast */
+    background-color: #A9D3A9; /* Darker Pastel Green */
 }
 
 .completed {
     color: #fff;
-    background-color: #66BB6A; /* Darker Light Green for high contrast */
+    background-color: #A8D5A2; /* Darker Pastel Light Green */
 }
 
 .returned {
     color: #fff;
-    background-color: #C62828; /* Darker Red for high contrast */
+    background-color: #F29B9B; /* Darker Pastel Coral Red */
 }
 
 .refunded {
     color: #fff;
-    background-color: #8E44AD; 
+    background-color: #D8A2F0; /* Darker Pastel Purple */
 }
 
 .pagination {
