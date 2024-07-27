@@ -306,7 +306,7 @@ iframe{
     transition: background-color 0.3s ease;
 }
 
-.sidebar ul li a.orders {
+.sidebar ul li a.payment-methods {
     color: #fff; /* Text color for the active item */
     background-color: #007bff; /* Background color for the active item */
     font-weight: bold;
@@ -322,6 +322,19 @@ iframe{
     height: 500px;
     padding: 20px;
     padding-left: 0%;
+}
+
+.main-content p {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* SVG ICONS */
+svg {
+    width: 70px; /* or any desired width */
+    height: 70px; /* or any desired height */
+    fill: #7a7676;
+    margin-bottom: 10px;
 }
 
 .numItems {
@@ -340,137 +353,81 @@ iframe{
     right: 300px;
 }
 
-/* Order History */
-.billing-history {
+/* PAYMENT METHODS CONTAINER */
+
+.container {
     width: 90%;
-    /* max-width: 1000px; */
-    background-color: white;
+    background-color: #ffffffe7;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
+    height: 80%;
 }
 
-.billing-history h2 {
+.container h2 {
     margin-top: 0;
     font-size: 24px;
     font-weight: normal;
 }
 
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-}
-
-thead {
-    background-color: #f9f9f9;
-}
-
-th, td {
-    padding: 12px 15px;
-    text-align: left;
-}
-
-th {
-    font-weight: bold;
-}
-
-tbody tr:nth-child(even) {
-    background-color: #f2f2f2;
-}
-
-.status {
-    padding: 5px 10px;
-    border-radius: 4px;
-    text-align: center;
-    display: inline-block;
-}
-
-/*
-
-ORDER STATUS 
-
-Pending - The order has been received but not yet processed.
-Processing - The order is being processed.
-Shipped - The order has been shipped to the customer.
-Delivered - The order has been delivered to the customer.
-Completed - The order has been completed and finalized.
-Canceled - The order has been canceled.
-Refunded - The order has been refunded.
-On Hold - The order is temporarily on hold.
-Failed - The order processing failed.
-Returned - The order was returned by the customer. 
-
-*/
-
-
-.pending {
-    color: #fff;
-    background-color: #F4A261; /* Darker Pastel Orange */
-}
-
-.processing {
-    color: #fff;
-    background-color: #8EB1D6; /* Darker Pastel Blue */
-}
-
-.on-hold {
-    color: #fff;
-    background-color: #F4B730; /* Darker Pastel Amber */
-}
-
-.cancelled {
-    color: #fff;
-    background-color: #F5A5A5; /* Darker Pastel Red */
-}
-
-.shipped {
-    color: #fff;
-    background-color: #8FD4D2; /* Darker Pastel Teal */
-}
-
-.delivered {
-    color: #fff;
-    background-color: #A9D3A9; /* Darker Pastel Green */
-}
-
-.completed {
-    color: #fff;
-    background-color: #A8D5A2; /* Darker Pastel Light Green */
-}
-
-.returned {
-    color: #fff;
-    background-color: #F29B9B; /* Darker Pastel Coral Red */
-}
-
-.refunded {
-    color: #fff;
-    background-color: #D0A6C0; /* Darker Pastel Purple */
-}
-
-.pagination {
-    margin-top: 20px;
+.card-content {
     display: flex;
+    column-gap: 5%;
     justify-content: center;
     align-items: center;
+    height: 80%;
 }
 
-.pagination button {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    margin: 0 5px;
-    border-radius: 4px;
+.card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 30%;
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
     cursor: pointer;
 }
 
-.pagination button:disabled {
-    background-color: #cccccc;
-    cursor: not-allowed;
+.card.unavailable {
+    opacity: 0.5; /* Reduce visibility */
+    pointer-events: none; /* Make card non-interactive */
 }
 
-.pagination span {
-    margin: 0 10px;
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.card .icon {
+    margin-bottom: 10px;
+}
+
+.icon svg {
+    color: #333;
+}
+
+.card.card.unavailable h3 {
+    font-size: 18px;
+    color: #333;
+    margin: 0;
+    margin-bottom: 5%;
+}
+
+.status-message {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    font-size: 0.9em;
+    color: #888;
+}
+
+select {
+    width: 200px;
+    padding: 5px;
+    font-size: 16px;
+}
+
+option[disabled] {
+    color: #999;
 }
