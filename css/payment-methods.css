@@ -391,7 +391,7 @@ svg {
 
 .card.unavailable {
     opacity: 0.5; /* Reduce visibility */
-    pointer-events: none; /* Make card non-interactive */
+    cursor: not-allowed;
 }
 
 .card:hover {
