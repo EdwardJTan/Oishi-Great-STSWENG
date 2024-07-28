@@ -461,7 +461,7 @@ img{
     border-radius: 50%;
     position: absolute;
     top: 50%;
-    right: 300px;
+    right: 63px;
 }
 
 .cartArea {
@@ -562,4 +562,9 @@ body.showCart .allBoxes {
     text-align: center;
     font-size: larger;
     font-weight: bold;
+}
+
+#tabs-icon{
+    position: relative;
+    display: inline-block;
 }

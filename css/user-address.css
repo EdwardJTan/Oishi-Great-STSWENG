@@ -448,3 +448,8 @@ iframe{
     top: 50%;
     right: 300px;
 }
+
+#tabs-icon{
+    position: relative;
+    display: inline-block;
+}
