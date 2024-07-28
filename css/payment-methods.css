@@ -350,7 +350,12 @@ svg {
     border-radius: 50%;
     position: absolute;
     top: 50%;
-    right: 300px;
+    right: 63px;
+}
+
+#tabs-icon{
+    position: relative;
+    display: inline-block;
 }
 
 /* PAYMENT METHODS CONTAINER */
