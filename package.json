@@ -3,7 +3,10 @@
     "axios": "^1.7.2",
     "bcrypt": "^5.1.1",
     "body-parser": "^1.20.2",
+    "chai": "^4.5.0",
+    "chai-http": "^4.4.0",
     "connect-mongo": "^5.1.0",
+    "cypress": "^13.13.2",
     "dot-env": "^0.0.1",
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
@@ -15,6 +18,7 @@
     "mongodb": "^6.8.0",
     "mongoose": "^8.5.1",
     "node-schedule": "^2.1.1",
+    "oishi-great-stsweng": "file:",
     "wokest-boi.github.io": "file:"
   },
   "name": "oishi-great-stsweng",
@@ -22,10 +26,13 @@
   "description": "This is the updated website as a requirement for STSWENG",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha --timeout 5000",
     "start": "node index.js"
   },
   "author": "",
   "license": "ISC",
-  "devDependencies": {}
+  "devDependencies": {
+    "mocha": "^10.7.0",
+    "sinon": "^18.0.0"
+  }
 }
