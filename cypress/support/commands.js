@@ -23,3 +23,11 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+Cypress.Commands.add('login', (email, password) => {
+    cy.visit('https://oishi-great-stsweng.onrender.com/login');
+    cy.get('input[name="email"]').type(email);
+    cy.get('input[name="password"]').type(password);
+    cy.get('input[type="submit"]').click();
+    cy.url().should('eq', 'https://oishi-great-stsweng.onrender.com/');
+});
