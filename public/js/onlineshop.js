@@ -4,12 +4,15 @@ document.addEventListener('DOMContentLoaded', () => {
     let iconCartSpan = document.querySelector('.numItems');
     let totalCostElement = document.querySelector('.totalCost');
     let cart = [];
+    const checkoutButton = document.querySelector('.checkOut');
 
     const updateCartUI = (cart, totalCost) => {
         listCartHTML.innerHTML = '';
         let totalQuantity = 0;
     
         if (cart.length > 0) {
+            checkoutButton.removeAttribute('disabled', 'true');
+            checkoutButton.style.cursor = 'pointer'; 
             cart.forEach(item => {
                 totalQuantity += item.quantity;
                 const itemBox = document.createElement('div');
@@ -27,9 +30,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 listCartHTML.appendChild(itemBox);
             });
         } else {
+            checkoutButton.setAttribute('disabled', 'true');
+            checkoutButton.style.cursor = 'not-allowed';
             listCartHTML.innerHTML = '<p>Your cart is empty.</p>';
         }
-    
+
         iconCartSpan.textContent = totalQuantity;
         console.log('Total Cost:', totalCost);
         totalCostElement.textContent = `Total Cost: ₱${totalCost.toFixed(2)}`;
@@ -103,4 +108,5 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    loadCart();
 });

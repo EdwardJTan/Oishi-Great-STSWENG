@@ -499,6 +499,10 @@ body.showCart .allBoxes {
     font-weight: 300;
 }
 
+.cartArea .emptyCartMessage{
+    text-align: center;
+}
+
 .cartArea .btn{
     display: grid;
     padding-top: 15px;
