@@ -40,7 +40,7 @@ exports.addToCart = async (req, res) => {
         }
         await cart.save();
         const cartObj = await Cart.findOne({ userId: req.session.userId }).populate('items.productId') || { items: [] };
-    
+
         let totalCost = 0;
         cartObj.items.forEach(item => {
             totalCost += item.productId.price * item.quantity;
@@ -69,7 +69,7 @@ exports.updateCartQuantity = async (req, res) => {
                 }
             }
         }
-      
+
         await cart.save();
         const cartObj = await Cart.findOne({ userId: req.session.userId }).populate('items.productId') || { items: [] };
         let totalCost = 0;
@@ -86,7 +86,7 @@ exports.checkout = async (req, res) => {
     try {
         const cart = await Cart.findOneAndDelete({ userId: req.session.userId });
         if (!cart || cart.items.length === 0) {
-            return res.status(400).json({ success: false, message: 'Cart is empty' });
+            return res.json({ success: false, message: 'Cart is empty' });
         }
         res.json({ success: true, message: 'Checkout successful' });
     } catch (error) {
