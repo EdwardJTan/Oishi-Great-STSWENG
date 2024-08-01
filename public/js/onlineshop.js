@@ -108,5 +108,4 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    loadCart();
 });
