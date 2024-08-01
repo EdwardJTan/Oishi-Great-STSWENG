@@ -10,15 +10,13 @@ const bodyParser = require('body-parser');
 
 const app = express();
 const port = process.env.PORT || 3000;
-const hostname = process.env.HOSTNAME || 'localhost';
-
 
 // MongoDB connection
 mongoose.connect(process.env.MONGODB_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 })
-  .then(() => {console.log('Connected to MongoDB');})
+  .then(() => { console.log('Connected to MongoDB'); })
   .catch(err => console.error('Could not connect to MongoDB', err));
 
 hbs.registerPartials(__dirname + '/views/partials');
@@ -29,14 +27,7 @@ hbs.registerHelper('multiply', function (price, quantity) {
   return price * quantity;
 });
 
-// app.engine('hbs', engine({
-//   extname: '.hbs',
-//   defaultLayout: false,
-//   runtimeOptions: {
-//       allowProtoPropertiesByDefault: true,   
-//       allowProtoMethodsByDefault: true     
-//   }
-// }));
+// View engine setup
 app.set('view engine', 'hbs');
 app.set('views', path.join(__dirname, 'views'));
 
@@ -54,17 +45,9 @@ app.use(session({
   cookie: { maxAge: 1000 * 60 * 60 * 24 } // 1 day
 }));
 
-
 app.use(express.static('public'));
-app.use(bodyParser.json()); 
-app.use(bodyParser.urlencoded({ extended: true })); 
-
-// Ensure cart is passed to views
-// app.use((req, res, next) => {
-//   const cart = req.session.cart || [];
-//   res.locals.cartItemCount = cart.reduce((total, item) => total + item.quantity, 0);
-//   next();
-// });
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
 // Ensure user session is passed to views
 app.use((req, res, next) => {
@@ -77,6 +60,6 @@ const routes = require('./routes/routes');
 app.use('/', routes);
 
 // Start the server
-app.listen(port, hostname, () => {
-  console.log(`Server is running on http://${hostname}:${port}`);
+app.listen(port, () => {
+  console.log(`Server is running on port ${port}`);
 });
