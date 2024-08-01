@@ -62,36 +62,55 @@
         let iconCartSpan = document.querySelector('.numItems');
         let totalCostElement = document.querySelector('.totalCost');
         let cart = [];
+        const checkoutButton = document.querySelector('.checkOut');
 
         const updateCartUI = (cart, totalCost) => {
             listCartHTML.innerHTML = '';
             let totalQuantity = 0;
-
+        
             if (cart.length > 0) {
+                checkoutButton.removeAttribute('disabled', 'true');
+                checkoutButton.style.cursor = 'pointer'; 
                 cart.forEach(item => {
                     totalQuantity += item.quantity;
                     const itemBox = document.createElement('div');
                     itemBox.classList.add('itemBox');
                     itemBox.innerHTML = `
-                    <img src="${item.productId.image}" alt="${item.productId.name}">
-                    <p class="image-text">${item.productId.name}</p>
-                    <p class="image-text">₱${item.productId.price * item.quantity}</p>
-                    <div class="quantity">
-                        <span class="minus" data-id="${item.productId._id}">-</span>
-                        <span>${item.quantity}</span>
-                        <span class="plus" data-id="${item.productId._id}">+</span>
-                    </div>
-                `;
+                        <img src="${item.productId.image}" alt="${item.productId.name}">
+                        <p class="image-text">${item.productId.name}</p>
+                        <p class="image-text">₱${item.productId.price * item.quantity}</p>
+                        <div class="quantity">
+                            <span class="minus" data-id="${item.productId._id}">-</span>
+                            <span>${item.quantity}</span>
+                            <span class="plus" data-id="${item.productId._id}">+</span>
+                        </div>
+                    `;
                     listCartHTML.appendChild(itemBox);
                 });
             } else {
-                listCartHTML.innerHTML = '<p>Your cart is empty.</p>';
+                checkoutButton.setAttribute('disabled', 'true');
+                checkoutButton.style.cursor = 'not-allowed';
+                //listCartHTML.innerHTML = '<p>Your cart is empty.</p>';
+                listCartHTML.innerHTML = '<div class="emptyCartMessage"><p>Your cart is empty.</p></div>';
             }
 
             iconCartSpan.textContent = totalQuantity;
             console.log('Total Cost:', totalCost);
             totalCostElement.textContent = `Total Cost: ₱${totalCost.toFixed(2)}`;
         };
+
+        function toggleCheckout(isEnabled) {
+            const checkoutButton = document.querySelector('.checkOut');
+        
+            if (isEnabled) {
+                checkoutButton.removeAttribute('disabled', 'true');
+                checkoutButton.style.cursor = 'pointer'; 
+            } else {
+                checkoutButton.setAttribute('disabled', 'true');
+                checkoutButton.style.cursor = 'not-allowed';
+            }
+        }
+
         const changeQuantity = async (productId, type) => {
             try {
                 const response = await fetch('/update-cart', {
@@ -113,6 +132,7 @@
                 console.error('Error updating cart:', error);
             }
         };
+
         listCartHTML.addEventListener('click', (event) => {
             const target = event.target;
             if (target.classList.contains('minus') || target.classList.contains('plus')) {
@@ -121,5 +141,7 @@
                 changeQuantity(productId, type);
             }
         });
+
+        loadCart();
     })
 </script>
