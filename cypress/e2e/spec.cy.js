@@ -116,7 +116,7 @@ describe('Oishi Great Web App E2E Tests', () => {
     cy.visit('https://oishi-great-stsweng.onrender.com/orders');
     cy.get('#billingTable').should('exist');
     cy.get('#billingTable tbody tr').first().within(() => {
-      cy.get('td').eq(1).should('contain', 'Thu Aug 02 2024'); 
+      cy.get('td').eq(1).should('contain', 'Fri Aug 02 2024'); 
       cy.get('td').eq(3).should('contain', 'Pending'); 
     });
   });
@@ -130,8 +130,68 @@ describe('Oishi Great Web App E2E Tests', () => {
     cy.contains('Login'); 
   });
 
-  it('should log out successfully from the sidebar', () => {
+  it('should update the account details successfully', () => {
+    cy.visit('https://oishi-great-stsweng.onrender.com/editaccountdetails');
+
+    cy.get('input[name="firstName"]').clear().type('Jane');
+    cy.get('input[name="lastName"]').clear().type('Smith');
+    cy.get('input[name="username"]').clear().type('janesmith'); 
+
+    cy.get('button').contains('Save Changes').click();
+
+    //Check if form fields have been updated
+    cy.visit('https://oishi-great-stsweng.onrender.com/editaccountdetails');
+    cy.get('input[name="firstName"]').should('have.value', 'Jane');
+    cy.get('input[name="lastName"]').should('have.value', 'Smith');
+    cy.get('input[name="username"]').should('have.value', 'janesmith');
+  });
+
+});
+
+describe('Sidebar Navigation Tests', () => {
+  beforeEach(() => {
+    cy.viewport(1920, 1080);
+    cy.on('uncaught:exception', (err, runnable) => {
+      return false;
+    });
+
+    // Clear cookies and local storage before each test to ensure a fresh session
+    cy.clearCookies();
+    cy.clearLocalStorage();
+
+    // Log in before each test
+    cy.login('doe@gmail.com', '12345');
     cy.visit('https://oishi-great-stsweng.onrender.com/myaccount');
+  });
+
+  it('should navigate to dashboard', () => {
+    cy.get('.sidebar a.dashboard').click();
+    cy.url().should('include', '/myaccount');
+  });
+
+  it('should navigate to orders page', () => {
+    cy.get('.sidebar a.orders').click();
+    cy.url().should('include', '/orders');
+    cy.contains('Order History');
+  });
+
+  it('should navigate to addresses page', () => {
+    cy.get('.sidebar a.addresses').click();
+    cy.url().should('include', '/useraddress');
+  });
+
+  it('should navigate to payment methods page', () => {
+    cy.get('.sidebar a.payment-methods').click();
+    cy.url().should('include', '/payment');
+    cy.contains('Payment Methods');
+  });
+
+  it('should navigate to account', () => {
+    cy.get('.sidebar a.account-details').click();
+    cy.url().should('include', '/editaccountdetails');
+  });
+
+  it('should log out successfully from the sidebar', () => {
     cy.get('.sidebar').within(() => {
       cy.get('.logout').click(); 
     });
