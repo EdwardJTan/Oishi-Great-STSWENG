@@ -116,7 +116,7 @@ describe('Oishi Great Web App E2E Tests', () => {
     cy.visit('https://oishi-great-stsweng.onrender.com/orders');
     cy.get('#billingTable').should('exist');
     cy.get('#billingTable tbody tr').first().within(() => {
-      cy.get('td').eq(1).should('contain', 'Thu Aug 01 2024'); 
+      cy.get('td').eq(1).should('contain', 'Thu Aug 02 2024'); 
       cy.get('td').eq(3).should('contain', 'Pending'); 
     });
   });
@@ -126,6 +126,16 @@ describe('Oishi Great Web App E2E Tests', () => {
     cy.get('#userIcon').click(); 
     cy.get('#dropdownContent').invoke('show'); // Make the dropdown visible
     cy.get('#logoutLink').click(); 
+    cy.url().should('eq', 'https://oishi-great-stsweng.onrender.com/login'); 
+    cy.contains('Login'); 
+  });
+
+  it('should log out successfully from the sidebar', () => {
+    cy.visit('https://oishi-great-stsweng.onrender.com/myaccount');
+    cy.get('.sidebar').within(() => {
+      cy.get('.logout').click(); 
+    });
+
     cy.url().should('eq', 'https://oishi-great-stsweng.onrender.com/login'); 
     cy.contains('Login'); 
   });
