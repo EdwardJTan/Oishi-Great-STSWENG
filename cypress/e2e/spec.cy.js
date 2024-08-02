@@ -200,3 +200,56 @@ describe('Sidebar Navigation Tests', () => {
     cy.contains('Login'); 
   });
 });
+
+describe('Dashboard Navigation Tests', () => {
+  beforeEach(() => {
+    cy.viewport(1920, 1080);
+    cy.on('uncaught:exception', (err, runnable) => {
+      return false;
+    });
+
+    // Clear cookies and local storage before each test to ensure a fresh session
+    cy.clearCookies();
+    cy.clearLocalStorage();
+
+    // Log in before each test and go to my account page
+    cy.login('doe@gmail.com', '12345');
+    cy.visit('https://oishi-great-stsweng.onrender.com/myaccount');
+  });
+  
+  it('should send the user to the users order history', () => {
+    cy.contains('Orders');
+    cy.get("[onclick=\"window.location.href='/orders'\"]").click();
+    cy.url().should('eq', 'https://oishi-great-stsweng.onrender.com/orders');
+    cy.contains('Order History');
+  })
+
+  it('should send the user the user address', () => {
+    cy.contains('Addresses');
+    cy.get("[onclick=\"window.location.href='/useraddress'\"]").click();
+    cy.url().should('eq', 'https://oishi-great-stsweng.onrender.com/useraddress');
+    cy.contains('BILLING ADDRESS');
+    cy.contains('SHIPPING ADDRESS');
+  })
+
+  it('should send the user to the payment methods', () => {
+    cy.contains('Payment Methods');
+    cy.get("[onclick=\"window.location.href='/payment'\"]").click();
+    cy.url().should('eq', 'https://oishi-great-stsweng.onrender.com/payment');
+    cy.contains('Payment Methods');
+  })
+  
+  it('should send the user to account details', () => {
+    cy.contains('Account Details');
+    cy.get("[onclick=\"window.location.href='/editaccountdetails'\"]").click();
+    cy.url().should('eq', 'https://oishi-great-stsweng.onrender.com/editaccountdetails');
+    cy.contains('Password change');
+  });
+
+  it('should logout the user using the logout option in the user dashboard', () => {
+    cy.contains('Logout');
+    cy.get('.account-options > #logoutLink').click();
+    cy.url().should('eq', 'https://oishi-great-stsweng.onrender.com/login');
+    cy.contains('Login');
+  });
+});
