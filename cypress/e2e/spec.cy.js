@@ -37,9 +37,8 @@ describe('Oishi Great Web App E2E Tests', () => {
     cy.get('textarea[name="Inquiry"]').type('This is a test inquiry.');
     cy.get('input[type="submit"]').click();
 
-    // Assuming the form submission redirects or shows a success message, you can check for that
-    cy.url().should('eq', 'https://oishi-great-stsweng.onrender.com/location'); // Adjust if there's a redirect
-    // Add any success message check here if applicable
+
+    cy.url().should('eq', 'https://oishi-great-stsweng.onrender.com/location');
   });
 
   it('should load the login page', () => {
@@ -114,21 +113,20 @@ describe('Oishi Great Web App E2E Tests', () => {
     cy.get('.bx-cart').click(); 
     cy.get('.checkOut').should('not.be.disabled').click(); 
 
-    // Verify the order in the order history
     cy.visit('https://oishi-great-stsweng.onrender.com/orders');
     cy.get('#billingTable').should('exist');
     cy.get('#billingTable tbody tr').first().within(() => {
-      cy.get('td').eq(1).should('contain', 'Thu Aug 01 2024'); // Check Date
-      cy.get('td').eq(3).should('contain', 'Pending'); // Check Status
+      cy.get('td').eq(1).should('contain', 'Thu Aug 01 2024'); 
+      cy.get('td').eq(3).should('contain', 'Pending'); 
     });
   });
 
   it('should log out successfully', () => {
     cy.visit('https://oishi-great-stsweng.onrender.com');
-    cy.get('#userIcon').click(); // Click on the user icon to reveal the dropdown
+    cy.get('#userIcon').click(); 
     cy.get('#dropdownContent').invoke('show'); // Make the dropdown visible
-    cy.get('#logoutLink').click(); // Click the logout link
-    cy.url().should('eq', 'https://oishi-great-stsweng.onrender.com/login'); // Ensure redirection to the home page
-    cy.contains('Login'); // Check that the user is logged out and the login link is visible
+    cy.get('#logoutLink').click(); 
+    cy.url().should('eq', 'https://oishi-great-stsweng.onrender.com/login'); 
+    cy.contains('Login'); 
   });
 });
