@@ -356,6 +356,8 @@ iframe{
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
+    overflow-y: auto; 
+    max-height: 100%;
 }
 
 .billing-history h2 {
