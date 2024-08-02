@@ -22,7 +22,7 @@ describe('Cart Controller', () => {
             const res = { json: sinon.spy(), status: sinon.stub().returnsThis() };
 
             sandbox.stub(Cart, 'findOne').returns({
-                populate: sandbox.stub().resolves({ items: [] }) // Ensure items is initialized
+                populate: sandbox.stub().resolves({ items: [] }) 
             });
 
             await cartController.getCart(req, res);

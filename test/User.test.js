@@ -4,7 +4,7 @@ const moment = require('moment');
 const bcrypt = require('bcrypt');
 const { expect } = chai;
 const User = require('../models/User');
-const userController = require('../controllers/User'); // Adjust the path if needed
+const userController = require('../controllers/User'); 
 
 describe('User Controller', () => {
   describe('signup', () => {

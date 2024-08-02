@@ -2,7 +2,7 @@ const chai = require('chai');
 const sinon = require('sinon');
 const { expect } = chai;
 const Product = require('../models/Product');
-const productController = require('../controllers/productController'); // Ensure this is the correct controller
+const productController = require('../controllers/productController');
 
 describe('productController - getOnlineShop', () => {
     let sandbox;
@@ -16,7 +16,7 @@ describe('productController - getOnlineShop', () => {
     });
 
     it('should fetch and render products for the online shop', async () => {
-        const req = {}; // Mock request object
+        const req = {}; 
         const res = {
             status: sinon.stub().returnsThis(),
             json: sinon.stub(),
@@ -38,7 +38,7 @@ describe('productController - getOnlineShop', () => {
     });
 
     it('should handle errors when fetching products', async () => {
-        const req = {}; // Mock request object
+        const req = {};
         const res = {
             status: sinon.stub().returnsThis(),
             send: sinon.stub()

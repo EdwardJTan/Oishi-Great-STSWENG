@@ -3,7 +3,7 @@ const sinon = require('sinon');
 const bcrypt = require('bcrypt');
 const { expect } = chai;
 const User = require('../models/User');
-const userController = require('../controllers/Login'); // Adjust the path if needed
+const userController = require('../controllers/Login'); 
 
 describe('User Controller', () => {
     describe('login', () => {
