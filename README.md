@@ -26,4 +26,4 @@ Afterwards, run the following command:
 ```bash
 node index.js
 ```
-To open the [website](localhost:3000).
+To open the [website](http://localhost:3000/).
